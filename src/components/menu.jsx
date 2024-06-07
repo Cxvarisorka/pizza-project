@@ -55,19 +55,27 @@ const pizzaData = [
 ];
 
 const Menu = () => {
+    const pizzasLength = pizzaData.length; 
     return (
         <main className="menu">
             <h2>Our Menu</h2>
-            {pizzaData.length && (
-                <ul className="pizzas">
-                  {
-                    pizzaData.map((pizzaObj, i) => {
-                        return (
-                            <Pizza key={i} {...pizzaObj}/>
-                        )
-                    })
-                  }
-                </ul>
+
+            {pizzasLength > 0 ? (
+                <>
+                  <p>Authentic Italian cusine. 6 creative dishes to choose from. All from our stone oven, all organic, all delicious.</p>
+                  
+                  <ul className="pizzas">
+                    {
+                      pizzaData.map((pizzaObj, i) => {
+                          return (
+                              <Pizza key={i} {...pizzaObj}/>
+                          )
+                      })
+                    }
+                  </ul>
+                </>
+              ) : (
+                <p>We are still working on our menu</p>
               )
             }
         </main>
