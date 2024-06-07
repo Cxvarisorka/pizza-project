@@ -1,0 +1,16 @@
+const Header = () => {
+
+    // const style = {
+    //     color: "red", 
+    //     fontSize: "50px", 
+    //     textTransform: 'uppercase'
+    // };
+
+    return (
+        <header className="header">
+            <h1>Fast React Pizza Co.</h1>
+        </header>
+    )
+}
+
+export default Header;
